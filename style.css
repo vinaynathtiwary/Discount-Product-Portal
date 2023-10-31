@@ -8,20 +8,23 @@
 /* Set a background color for the entire page */
 body {
   background-color: #f8f8f8;
-  font-family: Arial, sans-serif;
-  font-family: cursive;
+  font-family: "Lucida Bright", Arial, sans-serif, cursive;
 }
 
-/* Style the navigation bar */
+/* Style the navigation bar (Header) */
 nav {
   background-color: #0073e6;
   color: #fff;
   text-align: center;
   padding: 20px 0;
+  /* Add gradient background for a more attractive look */
+  background: linear-gradient(45deg, #005ea6, #00a3e6);
 }
 
 nav h1 {
   font-size: 32px;
+  margin: 0; /* Remove default margin */
+  text-transform: uppercase; /* Uppercase header text */
 }
 
 /* Style each section */
@@ -29,9 +32,16 @@ section {
   margin: 20px;
   background-color: #fff;
   border-radius: 5px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   padding: 20px;
   transition: transform 0.2s ease;
+}
+
+.mainSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
 }
 
 section:hover {
@@ -46,7 +56,7 @@ section h2 {
 
 /* Style the images within sections */
 section img {
-  max-width: 100%;
+  max-width: 200px; /* Set the initial size of the image to 200px */
   height: auto;
   display: block;
   margin: 0 auto 15px;
@@ -62,6 +72,7 @@ button {
   cursor: pointer;
   font-size: 18px;
   transition: background-color 0.3s ease;
+  text-transform: uppercase; /* Uppercase button text */
 }
 
 button a {
@@ -71,4 +82,68 @@ button a {
 
 button:hover {
   background-color: #ff5500;
+}
+
+/* Media Query for screens smaller than 768px */
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens here */
+  section {
+    margin: 10px;
+    padding: 10px;
+    width: 80vw;
+  }
+
+  .mainSection {
+    flex-direction: column;
+    height: max-content;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 95vw;
+  }
+
+  section img {
+    max-width: 100%;
+  }
+
+  button {
+    padding: 10px 20px;
+  }
+}
+
+/* Style the footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  /* Add gradient background for a more attractive look */
+  background: linear-gradient(45deg, #555, #777);
+}
+
+/* Media Query for the footer on screens smaller than 768px */
+@media (max-width: 768px) {
+  footer {
+    font-size: 14px;
+    padding: 20px;
+  }
+}
+
+/* Style the header and footer text more professionally */
+nav h1,
+footer p {
+  font-weight: bold;
+}
+
+/* Style the header and footer links */
+nav a,
+footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+footer a:hover {
+  color: #ff5500;
 }
