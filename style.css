@@ -1,0 +1,74 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a background color for the entire page */
+body {
+  background-color: #f8f8f8;
+  font-family: Arial, sans-serif;
+  font-family: cursive;
+}
+
+/* Style the navigation bar */
+nav {
+  background-color: #0073e6;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+nav h1 {
+  font-size: 32px;
+}
+
+/* Style each section */
+section {
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+section:hover {
+  transform: scale(1.02);
+}
+
+section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #0073e6;
+}
+
+/* Style the images within sections */
+section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+/* Style the buttons */
+button {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #ff5500;
+}
